@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te quiero!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</header>
+<body>
+    <div class="container text-center">
+        <img src="gatito2.gif" class="img-thumbnail">
+        <h1>¿Quieres pasar este fin de semana conmigo? 🤭</h1>
+        <div class="d-grid gap-3 col-6 mx-auto">
+            <button id="boton-si" type="button" class="btn btn-primary btn-lg">Shiiii!!!!😍😍😍😍🥰🥰🥰🥰❤️❤️❤️❤️❤️❤️</button>
+            <button id="boton-no" type="button" class="btn btn-danger btn-lg">Ño</button>
+        </div>
+    </div>
+    <script>
+        const cadenas = ["¿Segura? 😨", "¿De verdad estas segura? 🥺", "Ño me quieres 😔", "JAJA te engañe, shi saldremos 😘"];
+        let i = 0;
+        const botonNo = document.querySelector("#boton-no");
+        const botonSi = document.querySelector("#boton-si");
+        const imagen = document.querySelector("img")
+
+        botonNo.addEventListener("click", function() {
+            if (i < cadenas.length) {
+                if (i === 0) {
+                    imagen.src = "gatito5.gif"
+                } else if (i === 3) {
+                    imagen.src = "gatito6.gif"
+                }
+                botonNo.innerHTML = cadenas[i]
+                i++;
+            }
+            else {
+                location.href = "confirmacion.html"
+            }
+        });
+
+        botonSi.addEventListener("click", function() {
+            location.href = "confirmacion.html"
+        });
+    </script>
+</body>
+</html>
